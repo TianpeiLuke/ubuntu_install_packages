@@ -8,10 +8,26 @@ sudo apt-get install unzip zip
 
 sudo apt-get install git pkg-config cmake build-essential python3-dev  python3-pip python3-numpy python3-scipy cython3   python3-setuptools  python3-matplotlib  python3-pandas  python3-pandas-lib
 
+#install .bashrc .bash_profile .vimrc
+git clone https://github.com/TianpeiLuke/ubuntu_install_packages.git
+
+cp ~/ubuntu_install_packages/.vimrc
+cp ~/ubuntu_install_packages/.bashrc
+
+mkdir .vim
+cd .vim
+mkdir colors
+mkdir backups
+mkdir swaps
+mkdir undo
+
 #download and install anaconda3
 #wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3*-Linux-x86_64.sh
 
+
+#install latex
+sudo apt-get install texlive-full
 
 
 sudo apt-get update

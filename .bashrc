@@ -147,6 +147,3 @@ export SPARK_HOME="/home/lukexie/spark-2.3.0-bin-hadoop2.7"
 export SPARK_LOCAL_DIR=/home/lukexie
 export SPARK_WORKER_DIR=/home/lukexie
 alias pyspark="pyspark --conf spark.local.dir=/home/lukexie"
-
-export AWSAccessKeyId=AKIAINYMXAKDNIDV3LFQ
-export AWSSecretKey=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
