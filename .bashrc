@@ -140,7 +140,7 @@ export PYTHON_PATH="$PYTHON_PATH:/home/lukexie/xgboost/python-package"
 export JAVA_HOME=$(which java)
 
 export PYSPARK_PYTHON="/usr/lukexie/anaconda3/bin/python"
-export PATH="$PATH:/home/lukexie/spark-2.3.0-bin-hadoop2.7/bin"
+export PATH="/home/lukexie/spark-2.3.0-bin-hadoop2.7/bin:$PATH"
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook" pyspark
 export SPARK_HOME="/home/lukexie/spark-2.3.0-bin-hadoop2.7"
