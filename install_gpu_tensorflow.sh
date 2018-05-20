@@ -13,8 +13,8 @@ sudo apt-get update
 #download and install .bashrc .bash_profile .vimrc from git
 git clone https://github.com/TianpeiLuke/ubuntu_install_packages.git
 
-cp ~/ubuntu_install_packages/.vimrc
-cp ~/ubuntu_install_packages/.bashrc
+cp ~/ubuntu_install_packages/.vimrc  $HOME
+cp ~/ubuntu_install_packages/.bashrc $HOME
 
 mkdir .vim
 cd .vim
