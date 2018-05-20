@@ -1,4 +1,4 @@
-cuda_version=9.0
+cuda_version=9.0.176
 cudnn_version=v7.0.5
 anaconda3_version=3-5.1.0
 
