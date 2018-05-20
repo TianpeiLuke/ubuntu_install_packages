@@ -8,7 +8,9 @@ sudo apt-get install unzip zip
 
 sudo apt-get install git pkg-config cmake build-essential python3-dev  python3-pip python3-numpy python3-scipy cython3   python3-setuptools  python3-matplotlib  python3-pandas  python3-pandas-lib
 
-#install .bashrc .bash_profile .vimrc
+sudo apt-get update
+
+#download and install .bashrc .bash_profile .vimrc from git
 git clone https://github.com/TianpeiLuke/ubuntu_install_packages.git
 
 cp ~/ubuntu_install_packages/.vimrc
@@ -21,6 +23,14 @@ mkdir backups
 mkdir swaps
 mkdir undo
 
+#install Chinese input
+sudo apt-get install ibus-pinyin
+sudo apt-get install ibus-sunpinyin
+sudo apt-get install fcitx-googlepinyin
+ibus restart
+
+sudo apt-get update
+
 #download and install anaconda3
 #wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3*-Linux-x86_64.sh
@@ -32,11 +42,20 @@ sudo apt-get install texlive-full
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install build-essential
 
-#wget https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_396.26_linux
+
+#install java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update; sudo apt install oracle-java8-installer
+sudo apt install oracle-java8-set-default
+echo "JAVA_HOME=$(which java)" | sudo tee -a /etc/environment
+
+sudo apt-get install openjdk-8-jdk
+
 
 #install cuda-8.0
+
+#wget https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_396.26_linux
 #wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
 sudo sh cuda*_384.81_linux.run 
 
@@ -89,3 +108,21 @@ sudo apt-get install libtbb-dev
 sudo apt-get install libeigen3-dev
 
 pip install --upgrade virtualenv
+
+#install xgboost
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost
+make -j8
+
+#install cv3
+git clone https://github.com/opencv/opencv.git
+cd ~/opencv
+mkdir build
+cd build/
+
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DPYTHON_EXECUTABLE=$(which python3)  -DWITH_TBB=ON -DWITH_IPP=ON  -DWITH_TIFF=OFF -DWITH_V4L=ON -DWITH_QT=ON -DWITH_OPENGL=ON -DWITH_CUBLAS=ON -DCUDA_NVCC_FLAGS="-D_FORCE_INLINES"  -DWITH_OPENMP=ON -DWITH_CUDA=ON -DCUDA_FAST_MATH=ON -DBUILD_TESTS=ON ..
+
+make -j $(($(nproc) + 1))
+make install
+
+
