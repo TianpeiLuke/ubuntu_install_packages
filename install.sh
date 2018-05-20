@@ -1,3 +1,7 @@
+cuda_version=9.0
+cudnn_version=v7.0.5
+anaconda3_version=3-5.1.0
+
 #install vim editor
 sudo apt-get install vim
 
@@ -33,7 +37,7 @@ ibus restart
 sudo apt-get update
 
 #download and install anaconda3
-#wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 sh ./Anaconda3*-Linux-x86_64.sh
 
 
@@ -58,14 +62,17 @@ sudo apt-get install openjdk-8-jdk
 #install cuda-9.0
 
 #wget https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_396.26_linux
-#wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/1/cuda_9.0.176.1_linux-run
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/2/cuda_9.0.176.2_linux-run
+
 sudo sh cuda*_384.81_linux.run 
 
 sudo sh cuda*176.1_linux.run
 sudo sh cuda*176.2_linux.run
 
 #install cudnn 
-#wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/cudnn-9.0-linux-x64-v7
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/cudnn-9.0-linux-x64-v7
 
 tar -xf cudnn-9.0-linux-x64-v7
 cd cuda
