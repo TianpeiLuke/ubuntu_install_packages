@@ -55,7 +55,7 @@ echo "JAVA_HOME=$(which java)" | sudo tee -a /etc/environment
 sudo apt-get install openjdk-8-jdk
 
 
-#install cuda-8.0
+#install cuda-9.0
 
 #wget https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_396.26_linux
 #wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run
