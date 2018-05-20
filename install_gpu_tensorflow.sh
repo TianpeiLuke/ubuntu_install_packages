@@ -92,17 +92,15 @@ pip install keras
 #install libraries
 sudo apt-get install libatlas-dev libatlas3gf-base  libblas-dev liblapack-dev
 sudo apt-get install gfortran
-
 sudo apt-get install libboost-all-dev libboost-python-dev
 sudo apt-get install libsigc++-2.0-dev
 sudo apt-get install libcairo2 libcairo2-dev  libcairo-gobject2
 sudo apt-get install libcairomm-1.0-dev
 sudo apt-get install libcgal-dev
 sudo apt-get install libsparsehash-dev
-sudo apt-get install  expat  libexpat1-dev
-sudo apt-get install  libicu-dev
-sudo apt-get install  graphviz libgv-python libcgraph6 libgvc6 libgvpr2 libpathplan4 libgvc6-plugins-gtk libxdot4
-
+sudo apt-get install expat  libexpat1-dev
+sudo apt-get install libicu-dev
+sudo apt-get install graphviz libgv-python libcgraph6 libgvc6 libgvpr2 libpathplan4 libgvc6-plugins-gtk libxdot4
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev  libavutil-dev libavfilter-dev
 sudo apt-get install libxvidcore-dev libx264-dev
 sudo apt-get install libtiff-opengl libtiff-tools
@@ -130,3 +128,5 @@ make -j $(($(nproc) + 1))
 make install
 cd ~
 
+#install mxnet
+conda install -c anaconda mxnet
