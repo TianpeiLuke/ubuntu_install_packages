@@ -137,3 +137,6 @@ cd ~
 
 #install mxnet
 conda install -c anaconda mxnet
+
+#datashader
+conda install -c bokeh datashader
