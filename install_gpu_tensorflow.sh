@@ -22,6 +22,7 @@ mkdir colors
 mkdir backups
 mkdir swaps
 mkdir undo
+cd ~
 
 #install Chinese input
 sudo apt-get install ibus-pinyin
@@ -73,6 +74,7 @@ sudo cp -P include/cudnn.h /usr/local/cuda-9.0/include
 sudo cp -P lib64/libcudnn* /usr/local/cuda-9.0/lib64/
 sudo chmod a+r /usr/local/cuda-9.0/include/cudnn.h
 sudo chmod a+r /usr/local/cuda-9.0/lib64/libcudnn*
+cd ~
 
 sudo apt-get install libcupti-dev
 
@@ -114,6 +116,7 @@ pip install --upgrade virtualenv
 git clone --recursive https://github.com/dmlc/xgboost
 cd xgboost
 make -j8
+cd ~
 
 #install cv3
 git clone https://github.com/opencv/opencv.git
@@ -125,5 +128,5 @@ cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DPYTHON_EXEC
 
 make -j $(($(nproc) + 1))
 make install
-
+cd ~
 
