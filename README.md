@@ -5,7 +5,11 @@
 1. vim
 2. ssh
 3. git, pkg-config, cmake, build-essential, setuptools, python3, cython3, pip
-4. texlive-full
-5. anaconda3
-6. cuda and cudnn
-7. tensorflw-gpu and keras
+4. anaconda3
+5. latex
+6. java
+7. cuda and cudnn
+8. tensorflw-gpu and keras
+9. other libraries
+10. xgboost
+11. cv3
