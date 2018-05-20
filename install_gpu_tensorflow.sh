@@ -38,6 +38,7 @@ sh ./Anaconda3*-Linux-x86_64.sh
 
 #install latex
 sudo apt-get install texlive-full
+sudo apt-get install klatexformula
 
 
 sudo apt-get update
