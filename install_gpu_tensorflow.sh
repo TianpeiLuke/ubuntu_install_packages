@@ -40,6 +40,9 @@ sudo chmod a+r /usr/local/cuda-9.0/lib64/libcudnn*
 
 sudo apt-get install libcupti-dev
 
-
+export CUDA_ROOT="/usr/local/cuda-9.0"
+export DYLD_LIBRARY_PATH="/usr/local/cuda-9.0/lib64"
+export PATH="/usr/local/cuda-9.0/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
 
 
